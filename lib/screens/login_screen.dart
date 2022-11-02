@@ -1,8 +1,10 @@
+
+
 import 'package:ecommerce/constants.dart';
+import 'package:ecommerce/screens/signup_screen.dart';
 import 'package:ecommerce/widgets/custom_textfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 class LoginScreen extends StatelessWidget {
   static String id='LoginScreen';
@@ -54,29 +56,36 @@ class LoginScreen extends StatelessWidget {
             child: OutlinedButton(
 
               onPressed: (){},
-                child: Text('Login'
+              style: OutlinedButton.styleFrom(
+                backgroundColor: Colors.black,
+              ),
+                child: const Text('Login'
                 ,style: TextStyle(
                     color: Colors.white
                   ),
                 ),
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Colors.black,
-              ),
             ),
           ),
           SizedBox(height: height*.01,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Dont Have an Account ?',
+              const Text('Dont Have an Account ?',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16
-              ),),
-              Text('Sign In',
+              ),
+              ),
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, SignUpScreen.id);
+                },
+                child: const Text('SignUp',
     style: TextStyle(
     fontSize: 16
-    ),),
+    ),
+                ),
+              ),
 
             ],
           ),
