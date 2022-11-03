@@ -40,10 +40,13 @@ static String id ='SignUpScreen';
           ),
           SizedBox(height: height*.1,),
 
+          CustomTextField(hint: 'Enter Your name !!', icon: Icons.perm_identity,   ),
+          SizedBox(height: height*.04,),
           CustomTextField(hint: 'Enter Your Email !!', icon: Icons.email,   ),
           SizedBox(height: height*.04,),
 
           CustomTextField(hint: 'Enter Your Password !!', icon: Icons.lock,   ),
+
           SizedBox(height: height*.06,),
 
           Padding(
@@ -73,9 +76,9 @@ static String id ='SignUpScreen';
               ),
               GestureDetector(
                 onTap: (){
-                  Navigator.pushNamed(context, SignUpScreen.id);
+
                 },
-                child: const Text('SignUp',
+                child: const Text('Login',
                   style: TextStyle(
                       fontSize: 16
                   ),
